@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Growth Ring Studios — Coming Soon</title>
+<title>Growth Ring Studios — Urban Wood Tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -25,7 +25,6 @@ html, body {
   color: var(--espresso);
   overflow-x: hidden;
 }
-/* Grain texture overlay */
 body::before {
   content: '';
   position: fixed;
@@ -35,7 +34,6 @@ body::before {
   z-index: 1000;
   opacity: 0.6;
 }
-/* Wood grain stripe — decorative left edge */
 .grain-stripe {
   position: fixed;
   left: 0; top: 0; bottom: 0;
@@ -48,7 +46,6 @@ body::before {
     var(--forest) 100%
   );
 }
-/* Main layout */
 .page {
   min-height: 100vh;
   display: flex;
@@ -58,7 +55,6 @@ body::before {
   padding: 48px 24px;
   position: relative;
 }
-/* Growth ring decorative circles — background */
 .rings {
   position: fixed;
   right: -120px;
@@ -68,14 +64,12 @@ body::before {
   pointer-events: none;
 }
 .rings svg { display: block; }
-/* Logo */
 .logo {
   width: min(520px, 88vw);
   margin-bottom: 48px;
   animation: fadeUp 1s ease both;
 }
 .logo img { width: 100%; display: block; }
-/* Tagline */
 .tagline {
   font-family: 'Roboto Slab', serif;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
@@ -90,7 +84,6 @@ body::before {
   font-weight: 700;
   color: var(--forest);
 }
-/* Divider */
 .divider {
   width: 64px;
   height: 2px;
@@ -99,10 +92,122 @@ body::before {
   border-radius: 2px;
   animation: fadeUp 1s 0.25s ease both;
 }
-/* Coming soon block */
+
+/* ── Calculogger featured card ──────────────────────────── */
+.featured-app {
+  width: min(600px, 92vw);
+  animation: fadeUp 1s 0.35s ease both;
+  margin-bottom: 48px;
+}
+.app-card {
+  background: var(--parchment);
+  border: 1.5px solid var(--parchment-dark);
+  border-radius: 16px;
+  padding: 32px;
+}
+.app-card-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--forest);
+  border: 1.5px solid var(--forest);
+  border-radius: 100px;
+  padding: 3px 12px;
+  margin-bottom: 16px;
+}
+.app-card-name {
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--espresso);
+  margin-bottom: 10px;
+}
+.app-card-desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--espresso-mid);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 480px;
+}
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-bottom: 28px;
+}
+@media (max-width: 420px) {
+  .tool-grid { grid-template-columns: 1fr; }
+}
+.tool-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--espresso-mid);
+  line-height: 1.4;
+}
+.tool-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background: var(--forest-mid);
+  margin-top: 4px;
+}
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--espresso);
+  color: var(--parchment);
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  transition: all 0.2s ease;
+  min-width: 148px;
+}
+.store-badge:hover {
+  background: var(--forest);
+  transform: translateY(-1px);
+}
+.store-badge-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: var(--parchment);
+}
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.store-badge-text small {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+.store-badge-text span {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ── More in 2026 ───────────────────────────────────────── */
 .coming-soon {
   text-align: center;
-  animation: fadeUp 1s 0.35s ease both;
+  animation: fadeUp 1s 0.45s ease both;
 }
 .coming-soon-label {
   font-size: 0.7rem;
@@ -114,7 +219,7 @@ body::before {
 }
 .coming-soon-text {
   font-family: 'Roboto Slab', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
   color: var(--espresso);
   line-height: 1.1;
@@ -128,14 +233,13 @@ body::before {
   max-width: 480px;
   margin: 0 auto 36px;
 }
-/* Product pills */
 .products {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   margin-bottom: 48px;
-  animation: fadeUp 1s 0.45s ease both;
+  animation: fadeUp 1s 0.55s ease both;
 }
 .pill {
   border: 1.5px solid var(--parchment-dark);
@@ -160,9 +264,10 @@ body::before {
   border-color: var(--forest);
   color: var(--parchment);
 }
-/* Email signup */
+
+/* ── Email signup ───────────────────────────────────────── */
 .signup {
-  animation: fadeUp 1s 0.55s ease both;
+  animation: fadeUp 1s 0.65s ease both;
   text-align: center;
 }
 .signup-label {
@@ -218,8 +323,6 @@ body::before {
   opacity: 0.6;
   cursor: not-allowed;
 }
-
-/* Status message */
 .signup-status {
   margin-top: 12px;
   font-size: 0.85rem;
@@ -227,29 +330,34 @@ body::before {
   min-height: 20px;
   transition: opacity 0.3s ease;
 }
-.signup-status.success {
-  color: var(--forest-mid);
-}
-.signup-status.error {
-  color: var(--burnt-orange);
-}
+.signup-status.success { color: var(--forest-mid); }
+.signup-status.error   { color: var(--burnt-orange); }
 
-/* Footer */
+/* ── Footer ─────────────────────────────────────────────── */
 .footer {
   margin-top: 64px;
   font-size: 0.75rem;
   color: var(--espresso-mid);
-  opacity: 0.45;
+  opacity: 0.55;
   letter-spacing: 0.06em;
   text-align: center;
-  animation: fadeUp 1s 0.65s ease both;
+  animation: fadeUp 1s 0.75s ease both;
+  line-height: 2;
 }
-/* Animations */
+.footer a {
+  color: var(--espresso-mid);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+.footer a:hover { color: var(--forest); opacity: 1; }
+.footer-sep { margin: 0 8px; opacity: 0.4; }
+
+/* ── Animations ─────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-/* Growth ring animation — subtle pulse */
 .rings circle {
   transform-origin: center;
   animation: ringPulse 6s ease-in-out infinite;
@@ -260,7 +368,7 @@ body::before {
 .rings circle:nth-child(5) { animation-delay: 1.6s; }
 @keyframes ringPulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50%       { opacity: 0.5; }
 }
 </style>
 </head>
@@ -268,19 +376,19 @@ body::before {
 
 <div class="grain-stripe"></div>
 
-<!-- Decorative growth rings -->
 <div class="rings">
   <svg width="500" height="500" viewBox="0 0 500 500">
     <circle cx="250" cy="250" r="240" fill="none" stroke="#1E1208" stroke-width="3"/>
     <circle cx="250" cy="250" r="190" fill="none" stroke="#1E1208" stroke-width="2.5"/>
     <circle cx="250" cy="250" r="140" fill="none" stroke="#1E1208" stroke-width="2"/>
-    <circle cx="250" cy="250" r="90" fill="none" stroke="#1E1208" stroke-width="1.5"/>
-    <circle cx="250" cy="250" r="45" fill="none" stroke="#1E1208" stroke-width="1.5"/>
-    <circle cx="250" cy="250" r="12" fill="#1E1208"/>
+    <circle cx="250" cy="250" r="90"  fill="none" stroke="#1E1208" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="45"  fill="none" stroke="#1E1208" stroke-width="1.5"/>
+    <circle cx="250" cy="250" r="12"  fill="#1E1208"/>
   </svg>
 </div>
 
 <main class="page">
+
   <div class="logo">
     <img src="https://github.com/growthringstudios/growthringstudios.com/blob/main/grs_logo.png?raw=true" alt="Growth Ring Studios">
   </div>
@@ -291,17 +399,63 @@ body::before {
 
   <div class="divider"></div>
 
+  <!-- Calculogger -->
+  <div class="featured-app">
+    <div class="app-card">
+      <div class="app-card-badge">Now Available</div>
+      <h2 class="app-card-name">Calculogger</h2>
+      <p class="app-card-desc">
+        Five wood calculators for sawyers, arborists, and urban wood programs.
+        Works offline — no login, no account, no data collected.
+      </p>
+
+      <div class="tool-grid">
+        <div class="tool-item">Board Feet Calculator</div>
+        <div class="tool-item">Log Information &amp; Scale</div>
+        <div class="tool-item">Milling Economics</div>
+        <div class="tool-item">Cut &amp; Yield Optimizer</div>
+        <div class="tool-item">Drying Estimator</div>
+      </div>
+
+      <div class="store-badges">
+        <!-- TODO: replace href="#" with live Google Play URL once published -->
+        <a href="#" class="store-badge" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.18 23.76c.32.18.68.22 1.04.1l12.2-7.04-2.72-2.72-10.52 9.66zm-1.5-20.5A1.5 1.5 0 0 0 1.5 4.5v15a1.5 1.5 0 0 0 .18.74l10.6-10.6L1.68 3.26zm19.2 8.16-2.96-1.7-3.06 3.06 3.06 3.06 2.98-1.72a1.5 1.5 0 0 0 0-2.7zM4.22.14A1.5 1.5 0 0 0 3.18.24L13.78 10.8l2.72-2.72L4.22.14z"/>
+          </svg>
+          <div class="store-badge-text">
+            <small>Get it on</small>
+            <span>Google Play</span>
+          </div>
+        </a>
+
+        <!-- TODO: replace href="#" with live App Store URL once published -->
+        <a href="#" class="store-badge" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="store-badge-text">
+            <small>Download on the</small>
+            <span>App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- More in 2026 -->
   <div class="coming-soon">
-    <p class="coming-soon-label">Launching 2026</p>
+    <p class="coming-soon-label">More in 2026</p>
     <h1 class="coming-soon-text">Every board <br>has its roots.</h1>
     <p class="coming-soon-sub">
       Tools for sawyers, urban wood programs, and municipalities —
-      from log to board, tracked and certifiable. Inventory management software, passive solar kiln controller kits, and updated solar kiln plans.
+      from log to board, tracked and certifiable.
     </p>
   </div>
 
   <div class="products">
-    <span class="pill green">Loggistics</span>
+    <span class="pill green">Calculogger</span>
+    <span class="pill">Loggistics</span>
     <span class="pill">Kilntroller</span>
     <span class="pill">Solar Kiln Plans</span>
     <span class="pill">USRW Certification</span>
@@ -318,23 +472,21 @@ body::before {
 
   <footer class="footer">
     © 2026 Growth Ring Studios LLC · Charlottesville, VA
+    <br>
+    <a href="/privacy.html">Privacy Policy</a>
+    <span class="footer-sep">·</span>
+    <a href="mailto:growthringstudios@gmail.com">Contact</a>
   </footer>
+
 </main>
 
 <script>
-  // -------------------------------------------------------
-  // CONFIGURATION — paste your Web App URL here after
-  // deploying the Apps Script (Extensions → Apps Script →
-  // Deploy → New deployment → Web app).
-  // -------------------------------------------------------
   const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwBhuJCChXxGb4fwt7s9mOsZVQE78LbOv2Ho4gT6KVYrnkvhs7XztKspSbvrs0tXe4I/exec";
-  // -------------------------------------------------------
 
   const btn    = document.getElementById("notify-btn");
   const input  = document.getElementById("email-input");
   const status = document.getElementById("signup-status");
 
-  // Allow submitting with Enter key
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") btn.click();
   });
@@ -342,14 +494,12 @@ body::before {
   btn.addEventListener("click", async function () {
     const email = input.value.trim();
 
-    // Client-side validation
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showStatus("Please enter a valid email address.", "error");
       input.focus();
       return;
     }
 
-    // Loading state
     btn.disabled = true;
     btn.textContent = "Sending…";
     showStatus("", "");
@@ -366,7 +516,6 @@ body::before {
         showStatus("✓ You're on the list — we'll be in touch!", "success");
         input.value = "";
         btn.textContent = "Done!";
-        // Reset button after 3 seconds
         setTimeout(() => {
           btn.textContent = "Notify me";
           btn.disabled = false;

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Calculogger by Growth Ring Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --parchment: #E8D9B8;
+  --parchment-dark: #D4C49E;
+  --espresso: #1E1208;
+  --espresso-mid: #3A2810;
+  --burnt-orange: #8B4A14;
+  --forest: #1A4D2E;
+  --forest-mid: #2E7D52;
+  --cream: #F5EDD8;
+}
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--cream);
+  color: var(--espresso);
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.6;
+}
+.grain-stripe {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  background: linear-gradient(
+    180deg,
+    var(--forest) 0%,
+    var(--forest-mid) 30%,
+    var(--burnt-orange) 60%,
+    var(--forest) 100%
+  );
+}
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 64px 32px 80px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--espresso-mid);
+  text-decoration: none;
+  opacity: 0.6;
+  margin-bottom: 48px;
+  transition: opacity 0.2s;
+}
+.back:hover { opacity: 1; }
+.back::before {
+  content: '←';
+  font-size: 1rem;
+}
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 12px;
+}
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--espresso);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.meta {
+  font-size: 0.8rem;
+  color: var(--espresso-mid);
+  opacity: 0.6;
+  margin-bottom: 40px;
+}
+.divider {
+  width: 64px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--burnt-orange), var(--forest));
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+.summary-box {
+  background: var(--parchment);
+  border: 1.5px solid var(--parchment-dark);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 40px;
+}
+.summary-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--espresso-mid);
+  line-height: 1.8;
+}
+.summary-box strong {
+  color: var(--forest);
+  font-weight: 700;
+}
+section {
+  margin-bottom: 36px;
+}
+h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--espresso);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--espresso-mid);
+  line-height: 1.8;
+}
+a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--forest-mid); }
+.footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--parchment-dark);
+  font-size: 0.75rem;
+  color: var(--espresso-mid);
+  opacity: 0.5;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+.footer a { color: var(--espresso-mid); }
+.footer-sep { margin: 0 8px; opacity: 0.4; }
+</style>
+</head>
+<body>
+
+<div class="grain-stripe"></div>
+
+<div class="page">
+
+  <a href="/" class="back">Growth Ring Studios</a>
+
+  <p class="eyebrow">Calculogger</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective June 20, 2026 · Growth Ring Studios LLC</p>
+
+  <div class="divider"></div>
+
+  <div class="summary-box">
+    <p>
+      <strong>The short version:</strong> Calculogger collects no personal data,
+      requires no account, and works entirely on your device. Nothing you enter
+      is ever sent to us or any third party.
+    </p>
+  </div>
+
+  <section>
+    <h2>What we collect</h2>
+    <p>
+      Nothing. Calculogger performs all calculations locally on your device.
+      No measurements, inputs, results, or usage patterns are transmitted,
+      stored on our servers, or shared with anyone.
+    </p>
+  </section>
+
+  <section>
+    <h2>Accounts &amp; login</h2>
+    <p>
+      Calculogger requires no account, registration, or login of any kind.
+    </p>
+  </section>
+
+  <section>
+    <h2>Analytics &amp; tracking</h2>
+    <p>
+      We do not use analytics tools, advertising identifiers, crash reporters,
+      or any third-party tracking SDKs. There are no cookies or local storage
+      entries written beyond what the app needs to function offline (the
+      Progressive Web App service worker cache).
+    </p>
+  </section>
+
+  <section>
+    <h2>Network requests</h2>
+    <p>
+      Once installed, Calculogger operates fully offline. The app does not
+      make any network requests during normal use. The initial load fetches
+      app assets from our hosting provider; no user data is included in those
+      requests.
+    </p>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>
+      Calculogger does not integrate any third-party SDKs, advertising
+      networks, or data brokers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>
+      Calculogger is not directed at children under 13. Because we collect no
+      personal data, no special handling is required.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>
+      If we ever add features that collect data, we will update this policy
+      before those features ship and note the new effective date at the top
+      of this page.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Questions? Email us at
+      <a href="mailto:growthringstudios@gmail.com">growthringstudios@gmail.com</a>.
+    </p>
+  </section>
+
+  <footer class="footer">
+    © 2026 Growth Ring Studios LLC · Charlottesville, VA
+    <br>
+    <a href="/">Home</a>
+    <span class="footer-sep">·</span>
+    <a href="mailto:growthringstudios@gmail.com">Contact</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
