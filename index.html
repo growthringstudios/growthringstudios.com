@@ -465,7 +465,7 @@ body::before {
     <br>
     <a href="/privacy.html">Privacy Policy</a>
     <span class="footer-sep">·</span>
-    <a href="mailto:info@growthringstudios.com">Contact</a>
+    <a href="#" class="js-email">Contact</a>
   </footer>
 
 </main>
@@ -524,6 +524,13 @@ body::before {
     status.textContent = message;
     status.className = "signup-status" + (type ? " " + type : "");
   }
+
+  (function () {
+    var e = 'info' + '@' + 'growthringstudios.com';
+    document.querySelectorAll('.js-email').forEach(function (a) {
+      a.href = 'mailto:' + e;
+    });
+  })();
 </script>
 
 </body>

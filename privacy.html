@@ -203,7 +203,7 @@ a:hover { color: var(--forest-mid); }
   <section>
     <h2>Contact</h2>
     <p>
-      Questions? Reach us at <a href="mailto:info@growthringstudios.com">info@growthringstudios.com</a>
+      Questions? Reach us at <a href="#" class="js-email js-email-text"></a>
       or visit <a href="https://growthringstudios.com">growthringstudios.com</a>.
     </p>
   </section>
@@ -213,10 +213,22 @@ a:hover { color: var(--forest-mid); }
     <br>
     <a href="/">Home</a>
     <span class="footer-sep">·</span>
-    <a href="mailto:info@growthringstudios.com">Contact</a>
+    <a href="#" class="js-email">Contact</a>
   </footer>
 
 </div>
+
+<script>
+  (function () {
+    var e = 'info' + '@' + 'growthringstudios.com';
+    document.querySelectorAll('.js-email').forEach(function (a) {
+      a.href = 'mailto:' + e;
+    });
+    document.querySelectorAll('.js-email-text').forEach(function (a) {
+      a.textContent = e;
+    });
+  })();
+</script>
 
 </body>
 </html>
