@@ -69,7 +69,7 @@ body::before {
 .rings svg { display: block; }
 .logo {
   width: min(520px, 88vw);
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   animation: fadeUp 1s ease both;
 }
 .logo img { width: 100%; display: block; }
@@ -330,7 +330,7 @@ body::before {
 
 /* ── Footer ─────────────────────────────────────────────── */
 .footer {
-  margin-top: 64px;
+  margin-top: 24px;
   font-size: 0.75rem;
   color: var(--espresso-mid);
   opacity: 0.55;
@@ -347,6 +347,33 @@ body::before {
 }
 .footer a:hover { color: var(--forest); opacity: 1; }
 .footer-sep { margin: 0 8px; opacity: 0.4; }
+
+/* ── Social links ───────────────────────────────────────── */
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeUp 1s 0.75s ease both;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--parchment-dark);
+  color: var(--espresso-mid);
+  transition: all 0.2s ease;
+}
+.social-links a:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--parchment);
+  transform: translateY(-1px);
+}
+.social-links svg { width: 26px; height: 26px; fill: currentColor; }
 
 /* ── Animations ─────────────────────────────────────────── */
 @keyframes fadeUp {
@@ -385,7 +412,7 @@ body::before {
 <main class="page">
 
   <div class="logo">
-    <img src="https://github.com/growthringstudios/growthringstudios.com/blob/main/grs_logo.png?raw=true" alt="Growth Ring Studios">
+    <img src="grs_logo.png" alt="Growth Ring Studios">
   </div>
 
   <p class="tagline">
@@ -446,9 +473,50 @@ body::before {
     </div>
   </div>
 
+  <!-- Loggistics -->
+  <div class="featured-app">
+    <div class="app-card">
+      <div class="app-card-badge">Now Available</div>
+      <h2 class="app-card-name">Loggistics</h2>
+      <p class="app-card-desc">
+        Chain-of-custody tracking for urban wood — from tree removal through
+        milling to finished product, documented and shareable for USRW certification.
+      </p>
+
+      <div class="tool-grid">
+        <div class="tool-item">Tree Removal &amp; Log Intake</div>
+        <div class="tool-item">Milling &amp; Production Tracking</div>
+        <div class="tool-item">USRW Certification Docs</div>
+        <div class="tool-item">Shareable Chain-of-Custody Pages</div>
+      </div>
+
+      <div class="store-badges">
+        <a href="https://loggistics.app" class="store-badge" target="_blank" rel="noopener" aria-label="Visit Loggistics">
+          <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zM19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/>
+          </svg>
+          <div class="store-badge-text">
+            <small>Launch the app at</small>
+            <span>loggistics.app</span>
+          </div>
+        </a>
+
+        <a href="https://docs.loggistics.app" class="store-badge" target="_blank" rel="noopener" aria-label="Read the Loggistics docs">
+          <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+          </svg>
+          <div class="store-badge-text">
+            <small>Read the</small>
+            <span>Documentation</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="products">
     <span class="pill green">Calculogger</span>
-    <span class="pill">Loggistics</span>
+    <span class="pill green">Loggistics</span>
     <span class="pill">Kilntroller</span>
     <span class="pill">Solar Kiln Plans</span>
   </div>
@@ -460,6 +528,14 @@ body::before {
       <button type="button" id="notify-btn">Notify me</button>
     </div>
     <p class="signup-status" id="signup-status" aria-live="polite"></p>
+  </div>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/growthringstudios" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43C21.99 8.94 22 9.28 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43-.26.66-.6 1.22-1.15 1.77-.55.55-1.11.9-1.77 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47-.66-.26-1.22-.6-1.77-1.15-.55-.55-.9-1.11-1.15-1.77-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.39-1.14.74-.35.35-.56.68-.74 1.14-.14.35-.3.88-.34 1.85C3.84 9 3.83 9.33 3.83 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.39.79.74 1.14.35.35.68.56 1.14.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.39 1.14-.74.35-.35.56-.68.74-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85-.18-.46-.39-.79-.74-1.14-.35-.35-.68-.56-1.14-.74-.35-.14-.88-.3-1.85-.34C14.99 3.83 14.67 3.83 12 3.83zm0 3.05a5.12 5.12 0 1 1 0 10.24A5.12 5.12 0 0 1 12 6.88zm0 1.8a3.32 3.32 0 1 0 0 6.64 3.32 3.32 0 0 0 0-6.64zm5.33-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+      </svg>
+    </a>
   </div>
 
   <footer class="footer">
