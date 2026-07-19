@@ -161,6 +161,49 @@ body::before {
   background: var(--forest-mid);
   margin-top: 4px;
 }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+@media (max-width: 420px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+.price-item {
+  background: var(--cream);
+  border: 1.5px solid var(--parchment-dark);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.price-item-label {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--espresso-mid);
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+.price-item-amount {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+.price-item-amount span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--espresso-mid);
+}
+.pricing-note {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--espresso-mid);
+  opacity: 0.65;
+  margin-bottom: 24px;
+}
 .store-badges {
   display: flex;
   flex-wrap: wrap;
@@ -490,6 +533,18 @@ body::before {
         <div class="tool-item">Shareable Chain-of-Custody Pages</div>
       </div>
 
+      <div class="pricing-grid">
+        <div class="price-item">
+          <div class="price-item-label">Single User</div>
+          <div class="price-item-amount">$75<span>/mo</span></div>
+        </div>
+        <div class="price-item">
+          <div class="price-item-label">Multi User</div>
+          <div class="price-item-amount">$200<span>/mo</span></div>
+        </div>
+      </div>
+      <p class="pricing-note">Save 15% billed annually · 15-day free trial</p>
+
       <div class="store-badges">
         <a href="https://loggistics.app" class="store-badge" target="_blank" rel="noopener" aria-label="Visit Loggistics">
           <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -534,6 +589,11 @@ body::before {
     <a href="https://www.instagram.com/growthringstudios" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43C21.99 8.94 22 9.28 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43-.26.66-.6 1.22-1.15 1.77-.55.55-1.11.9-1.77 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47-.66-.26-1.22-.6-1.77-1.15-.55-.55-.9-1.11-1.15-1.77-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.39-1.14.74-.35.35-.56.68-.74 1.14-.14.35-.3.88-.34 1.85C3.84 9 3.83 9.33 3.83 12s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.39.79.74 1.14.35.35.68.56 1.14.74.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.39 1.14-.74.35-.35.56-.68.74-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85-.18-.46-.39-.79-.74-1.14-.35-.35-.68-.56-1.14-.74-.35-.14-.88-.3-1.85-.34C14.99 3.83 14.67 3.83 12 3.83zm0 3.05a5.12 5.12 0 1 1 0 10.24A5.12 5.12 0 0 1 12 6.88zm0 1.8a3.32 3.32 0 1 0 0 6.64 3.32 3.32 0 0 0 0-6.64zm5.33-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/>
+      </svg>
+    </a>
+    <a href="https://www.youtube.com/@growthringstudios" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15.5v-7l6 3.5-6 3.5z"/>
       </svg>
     </a>
   </div>
