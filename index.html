@@ -221,6 +221,19 @@ body::before {
   opacity: 0.65;
   margin-bottom: 24px;
 }
+.pricing-note.archive-note {
+  opacity: 0.85;
+  margin-top: -14px;
+}
+.pricing-note.archive-note a {
+  color: var(--forest);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.pricing-note.archive-note a:hover {
+  color: var(--forest-mid);
+}
 .store-badges {
   display: flex;
   flex-wrap: wrap;
@@ -578,6 +591,7 @@ body::before {
         </div>
       </div>
       <p class="pricing-note">Save 15% billed annually · 15-day free trial</p>
+      <p class="pricing-note archive-note">Pausing between projects? Switch to <strong>Data Archive</strong> for $20/mo — read-only access to your existing records. <a href="https://docs.loggistics.app/billing#data-archive-plan" target="_blank" rel="noopener">Learn more →</a></p>
 
       <div class="store-badges">
         <a href="https://loggistics.app" class="store-badge" target="_blank" rel="noopener" aria-label="Visit Loggistics">
