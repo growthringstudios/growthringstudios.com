@@ -1,4 +1,29 @@
 User-agent: *
 Allow: /
+# Keep founder headshots out of search/image indexes
+Disallow: /images/team/
+
+# Image-indexing crawlers: no founder photos
+User-agent: Googlebot-Image
+Disallow: /images/team/
+
+User-agent: Bingbot
+Disallow: /images/team/
+
+# AI / dataset crawlers: no founder photos
+User-agent: GPTBot
+Disallow: /images/team/
+
+User-agent: Google-Extended
+Disallow: /images/team/
+
+User-agent: ClaudeBot
+Disallow: /images/team/
+
+User-agent: anthropic-ai
+Disallow: /images/team/
+
+User-agent: CCBot
+Disallow: /images/team/
 
 Sitemap: https://growthringstudios.com/sitemap.xml

@@ -10,13 +10,13 @@
 <meta property="og:url" content="https://growthringstudios.com/">
 <meta property="og:title" content="Growth Ring Studios — Urban Wood Tools">
 <meta property="og:description" content="Wood calculators and chain-of-custody tracking tools for sawyers, arborists, and urban wood programs.">
-<meta property="og:image" content="https://growthringstudios.com/og-image.png">
+<meta property="og:image" content="https://growthringstudios.com/images/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Growth Ring Studios — Urban Wood Tools">
 <meta name="twitter:description" content="Wood calculators and chain-of-custody tracking tools for sawyers, arborists, and urban wood programs.">
-<meta name="twitter:image" content="https://growthringstudios.com/og-image.png">
+<meta name="twitter:image" content="https://growthringstudios.com/images/og-image.png">
 <link rel="canonical" href="https://growthringstudios.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -367,8 +367,6 @@ body::before {
   min-height: 20px;
   transition: opacity 0.3s ease;
 }
-.signup-status.success { color: var(--forest-mid); }
-.signup-status.error   { color: var(--burnt-orange); }
 
 /* ── Footer ─────────────────────────────────────────────── */
 .footer {
@@ -389,6 +387,22 @@ body::before {
 }
 .footer a:hover { color: var(--forest); opacity: 1; }
 .footer-sep { margin: 0 8px; opacity: 0.4; }
+
+/* ── Top nav ────────────────────────────────────────────── */
+.topnav {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--espresso-mid);
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+.topnav:hover { opacity: 1; color: var(--forest); }
 
 /* ── Social links ───────────────────────────────────────── */
 .social-links {
@@ -453,8 +467,10 @@ body::before {
 
 <main class="page">
 
+  <a href="/about.html" class="topnav">About</a>
+
   <div class="logo">
-    <img src="grs_logo.png" alt="Growth Ring Studios">
+    <img src="images/grs_logo.png" alt="Growth Ring Studios">
   </div>
 
   <p class="tagline">
@@ -599,7 +615,7 @@ body::before {
   <div class="signup">
     <p class="signup-label">Get notified when we launch</p>
     <div class="signup-row">
-      <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
+      <label for="email-input"></label><input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
       <button type="button" id="notify-btn">Notify me</button>
     </div>
     <p class="signup-status" id="signup-status" aria-live="polite"></p>
@@ -621,6 +637,8 @@ body::before {
   <footer class="footer">
     © 2026 Growth Ring Studios LLC · Charlottesville, VA
     <br>
+    <a href="/about.html">About</a>
+    <span class="footer-sep">·</span>
     <a href="/privacy.html">Privacy Policy</a>
     <span class="footer-sep">·</span>
     <a href="#" class="js-email">Contact</a>
